@@ -21,4 +21,12 @@ function toggleMode() {
   // pegar a tam img e substituir a imagem
   // se tiver light mode, adicionar a imagem light
   // se tiver sem light mode, deixar imagem normal
+
+  const name = document.querySelector("#profile p");
+
+  if (html.classList.contains("light")) {
+    name.setAttribute("@jesuino.filho");
+  } else {
+    name.setAttribute("@couto-rafael");
+  }
 }
