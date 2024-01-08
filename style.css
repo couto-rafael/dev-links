@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+}
+
 body {
   /* background-image: url(./assets/bg-mobile.jpg);
   background-repeat: no-repeat;
@@ -11,12 +21,12 @@ body {
   background-size: cover; */
 
   /*background: color image repeat position/size*/
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: #ffffff;
+  color: var(--text-color);
 }
 #container {
   width: 360px;
@@ -33,12 +43,11 @@ body * {
 #profile img {
   width: 140px;
   border-radius: 50%;
-  border: 2px solid #ffffff;
 }
 
 #profile p {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 24px;
   margin-top: 8px;
 }
@@ -74,7 +83,7 @@ ul li a {
 
 ul li a:hover {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid white;
+  border: 1px solid var(--text-color);
 }
 
 #social-links {
@@ -96,4 +105,14 @@ ul li a:hover {
 #social-links a:hover {
   background: rgba(255, 255, 255, 0.2);
   padding: 16px;
+}
+
+footer {
+  padding: 24px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+#name-rafael {
+  text-decoration: none;
 }
